@@ -36,6 +36,11 @@ public:
         }
         return name < goat.name;
     }
+
+    void display()
+    {
+        cout << name << "(" << age << ", " << color << ")" << endl;
+    }
 };
 
 #endif

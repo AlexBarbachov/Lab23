@@ -57,7 +57,20 @@ void add_goat(list<Goat> &trip, string [], string [])
 
 void display_trip(list<Goat> trip)
 {
+    if (trip.empty())
+    {
+        cout << "No goats in the trip" << endl;
+        return; // exit method   
+    }
 
+    cout << "Current Goat Trip:" << endl;
+    int index = 1; // loop through the list and output
+    for (Goat goat : trip)
+    {
+        cout << "[" << setw(2) << index << "] ";
+        // use helper function
+        goat.display();
+    }
 }
 
 int main_menu()
