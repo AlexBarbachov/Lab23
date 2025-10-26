@@ -26,6 +26,16 @@ public:
     string get_color() const        { return color; }
 
     // write overloaded < operator for the std::list
+    // operator< means we are overloading  the < operator makes comparing objects possible
+    // compares first goat with second the goat param here is the first one when comparing g1 and g2. [as in g1 < g2]
+    bool operator<(const Goat &goat) const
+    {
+        if (name == goat.name)
+        {
+            return age < goat.age;
+        }
+        return name < goat.name;
+    }
 };
 
 #endif
