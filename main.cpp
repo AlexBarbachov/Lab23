@@ -30,8 +30,54 @@ int main() {
     fin1.close();
 
 
+    int choice;
+    choice = main_menu();
+
+
 
 
     return 0;
+}
+
+
+int select_goat(list<Goat> trip)
+{
+    return 0;
+}
+
+void delete_goat(list<Goat> &trip)
+{
+
+}
+
+void add_goat(list<Goat> &trip, string [], string [])
+{
+
+}
+
+void display_trip(list<Goat> trip)
+{
+
+}
+
+int main_menu()
+{
+    int choice;
+    cout << "\n****GOAT MANAGER 3001****" << endl
+        << "[1] Add a goat" << endl
+        << "[2] Delete a goat" << endl
+        << "[3] List Goats" << endl
+        << "[4] Quit" << endl
+        << "Choice --> ";
+    cin >> choice;
+
+    if (cin.fail())
+    {
+        cin.clear(); //clear flags
+        cin.ignore(1000, '\n');
+        return 0;
+    }
+
+    return choice;
 }
 
