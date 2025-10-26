@@ -90,7 +90,31 @@ int select_goat(list<Goat> trip)
 
 void delete_goat(list<Goat> &trip)
 {
+    if (trip.empty())
+    {
+        cout << "No goats to delete" << endl;
+        return;
+    }
 
+    int choice = select_goat(trip);
+    if (choice < 1 || choice > trip.size())
+    {
+        cout << "\nInvalid Choice." << endl;
+        return;
+    }
+
+    int index = 1; // start counting from 1
+    for (list<Goat>::iterator it = trip.begin(); it != trip.end(); it++)
+    {
+        if (index == choice)
+        {
+            cout << "Removing: ";
+            it->display(); // show which one is being removed
+
+            trip.erase(it);
+            return;
+        }
+    }
 
 }
 
