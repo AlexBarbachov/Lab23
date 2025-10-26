@@ -39,7 +39,7 @@ public:
 
     void display()
     {
-        cout << name << "(" << age << ", " << color << ")" << endl;
+        cout << name << "(" << age << ", " << color << ")";
     }
 };
 

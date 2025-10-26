@@ -88,8 +88,8 @@ void add_goat(list<Goat> &trip, string names[], string colors[])
     Goat goat(names[nameID], age, colors[colorID]);
     trip.push_back(goat);
 
-    cout << "Added";
-    goat.get_name();
+    cout << "Added ";
+    goat.display();
     cout << " to the trip" << endl;
 }
 
@@ -109,6 +109,7 @@ void display_trip(list<Goat> trip)
         // use helper function
         it->display();
 
+        cout << endl;
         // forgot to this last time
         index++;
     }
