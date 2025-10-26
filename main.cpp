@@ -33,6 +33,9 @@ int main() {
     int choice;
     choice = main_menu();
 
+    list<Goat> trip;
+    display_trip(trip);
+
 
 
 
@@ -65,11 +68,14 @@ void display_trip(list<Goat> trip)
 
     cout << "Current Goat Trip:" << endl;
     int index = 1; // loop through the list and output
-    for (Goat goat : trip)
+    for (list<Goat>::iterator it = trip.begin(); it != trip.end(); it++)
     {
         cout << "[" << setw(2) << index << "] ";
         // use helper function
-        goat.display();
+        it->display();
+
+        // forgot to this last time
+        index++;
     }
 }
 
