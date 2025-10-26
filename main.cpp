@@ -70,11 +70,27 @@ int main() {
 
 int select_goat(list<Goat> trip)
 {
+    int choice;
+    display_trip(trip);
+
+    cout << "\nEnter the goat index that you want to remove" << endl;
+    cin >> choice;
+
+    if (cin.fail())
+    {
+        cin.clear(); //clear flags
+        cin.ignore(1000, '\n');
+        return 0;
+    }
+
+    return choice;
+
     return 0;
 }
 
 void delete_goat(list<Goat> &trip)
 {
+
 
 }
 
