@@ -104,10 +104,9 @@ void delete_goat(list<Goat> &trip)
     }
 
     int index = 1; // start counting from 1
-    for (list<Goat>::iterator it = trip.begin(); it != trip.end(); it++)
+    for (list<Goat>::iterator it = trip.begin(); it != trip.end(); it++, index++)
     {
-        if (index == choice)
-        {
+        if (index == choice) {
             cout << "Removing: ";
             it->display(); // show which one is being removed
 
